@@ -1,0 +1,44 @@
+{% comment %} {%  comment %}
+This is a simple Liquid template snippet to demonstrate variable assignment and output.
+{% endcomment %}
+{% assign  myVariable = 11 %}
+{% capture html %}
+    <div>
+        <p>{{ myVariable }}</p>
+        <p>Welcome to our tutorial!</p>
+        <p>Enjoy learning Liquid!</p>
+    </div>
+{% endcapture %}
+
+{%  if myVariable > 10 %}
+        <p>Success! The variable is greater than 10.</p>
+{% else %}
+        <p>Warning! The variable is not greater than 10.</p>
+{% endif %}
+{% if product.type %}
+    {% case product.type%}
+    {% when 'T‑Shirt' %}
+        <p>This is a new cotton product!</p>
+    {% when 'sale' %}
+        <p>This product is on sale!</p>
+    {% else %}
+        <p>This is a regular product.</p>
+    {% endcase %}
+    {% endif %}
+
+     {% endcomment %}
+{% for product in collection.products %}
+    <p style="{% if forloop.first  %} color : green {% else if forloop.last %} color : orange {% endif %}">{{ forloop.index }}- {{ product.title }}</p>
+    {% endfor %}
+{% assign  mynumber = 10 %}
+{% comment %} {% assign  myNewNumber = mynumber | plus: 5 %}
+{%  assign myNewNumber = mynumber| minus :5 %}
+{%  assign myNewNumber = mynumber | divided_by:5 %} {% endcomment %}
+{% assign myNewNumber = mynumber | times:5 %}
+<p>My new number is: {{ myNewNumber }}</p>
+{%  assign myNumbersColors = 'html|orange,css|blue,javascript|yellow' | split : ',' %}
+{% for language in myNumbersColors %}
+    {% assign lang = language | split: '|' | first %}
+    {% assign  color = language | split: '|'| last %}
+    <p style="color :{{ color }}">{{ lang }}</p>
+    {% endfor %}

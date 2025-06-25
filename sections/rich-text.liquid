@@ -1,5 +1,10 @@
-{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
+{% comment %} Find filters {% endcomment %}
 
+{% assign heading_block =section.blocks | find : "type", "heading" %}
+
+<p>{{ heading_block.settings.heading }}</p>
+
+{{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
