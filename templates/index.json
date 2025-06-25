@@ -15,7 +15,7 @@
         "heading_3r87KE": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Talk about your brand 1",
             "heading_size": "h1"
           }
         },
@@ -28,19 +28,35 @@
         "button_ibPf3Y": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Learn more",
             "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
+        },
+        "heading_YwUt3Y": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand 2",
+            "heading_size": "h1"
+          }
+        },
+        "heading_yErtyW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand 3",
+            "heading_size": "h1"
+          }
         }
       },
       "block_order": [
         "heading_3r87KE",
         "text_EJkDrW",
-        "button_ibPf3Y"
+        "button_ibPf3Y",
+        "heading_YwUt3Y",
+        "heading_yErtyW"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
