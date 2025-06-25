@@ -1,0 +1,4 @@
+[environments.development]
+store = "boutique-test-cabraule.myshopify.com"
+# Add your theme ID here (optional - you can get this from your admin)
+# theme_id = "your-theme-id-here"
